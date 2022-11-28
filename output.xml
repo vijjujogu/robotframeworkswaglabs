@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221128 17:39:34.518" rpa="false" schemaversion="3">
+<suite id="s1" name="LoginTest" source="c:\Users\vijayalakshmi.jogu\PycharmProjects\swaglabs\TestCases\LoginTest.robot">
+<test id="s1-t1" name="Logintest" line="11">
+<kw name="open my browser" library="LoginKeywords">
+<arg>${siteurl}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${siteurl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221128 17:39:34.854" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221128 17:39:34.853" endtime="20221128 17:39:37.164"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221128 17:39:37.165" endtime="20221128 17:39:37.293"/>
+</kw>
+<status status="PASS" starttime="20221128 17:39:34.852" endtime="20221128 17:39:37.293"/>
+</kw>
+<kw name="Enter username" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginusername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221128 17:39:37.295" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
+<status status="PASS" starttime="20221128 17:39:37.294" endtime="20221128 17:39:37.404"/>
+</kw>
+<status status="PASS" starttime="20221128 17:39:37.294" endtime="20221128 17:39:37.404"/>
+</kw>
+<kw name="Enter password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginpassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221128 17:39:37.406" level="INFO">Typing text 'secret_sauce' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20221128 17:39:37.405" endtime="20221128 17:39:37.508"/>
+</kw>
+<status status="PASS" starttime="20221128 17:39:37.404" endtime="20221128 17:39:37.508"/>
+</kw>
+<kw name="Click signIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_loginbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221128 17:39:37.511" level="INFO">Clicking button 'name:login-button'.</msg>
+<status status="PASS" starttime="20221128 17:39:37.510" endtime="20221128 17:39:37.643"/>
+</kw>
+<status status="PASS" starttime="20221128 17:39:37.510" endtime="20221128 17:39:37.643"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221128 17:39:40.646" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221128 17:39:37.644" endtime="20221128 17:39:40.647"/>
+</kw>
+<kw name="verify successfull login" library="LoginKeywords">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221128 17:39:40.652" level="INFO">Page title is 'Swag Labs'.</msg>
+<status status="PASS" starttime="20221128 17:39:40.648" endtime="20221128 17:39:40.653"/>
+</kw>
+<status status="PASS" starttime="20221128 17:39:40.647" endtime="20221128 17:39:40.653"/>
+</kw>
+<kw name="close my browser" library="LoginKeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221128 17:39:40.654" endtime="20221128 17:39:47.342"/>
+</kw>
+<status status="PASS" starttime="20221128 17:39:40.653" endtime="20221128 17:39:47.342"/>
+</kw>
+<status status="PASS" starttime="20221128 17:39:34.852" endtime="20221128 17:39:47.342"/>
+</test>
+<status status="PASS" starttime="20221128 17:39:34.525" endtime="20221128 17:39:47.344"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginTest">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221128 17:39:34.847" level="ERROR">Error in file 'c:\Users\vijayalakshmi.jogu\PycharmProjects\swaglabs\TestCases\LoginTest.robot' on line 4: Importing library 'DataDriver' failed: ModuleNotFoundError: No module named 'DataDriver'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\vijayalakshmi.jogu\.vscode\extensions\robocorp.robotframework-lsp-1.5.0\src\robotframework_debug_adapter
+  C:\Users\vijayalakshmi.jogu\PycharmProjects\swaglabs
+  c:\Users\vijayalakshmi.jogu\.vscode\extensions\robocorp.robotframework-lsp-1.5.0\src
+  c:\Users\vijayalakshmi.jogu\.vscode\extensions\robocorp.robotframework-lsp-1.5.0\src\robotframework_ls\vendored
+  C:\Users\vijayalakshmi.jogu\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\vijayalakshmi.jogu\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\vijayalakshmi.jogu\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\vijayalakshmi.jogu\AppData\Local\Programs\Python\Python311
+  c:\Users\vijayalakshmi.jogu\PycharmProjects\swaglabs\venv
+  c:\Users\vijayalakshmi.jogu\PycharmProjects\swaglabs\venv\Lib\site-packages</msg>
+</errors>
+</robot>
